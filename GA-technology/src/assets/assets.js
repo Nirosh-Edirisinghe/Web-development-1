@@ -5,6 +5,7 @@ import bg_img from './bg_img.jpg'
 import about_img from './about_img.jpg'
 import vision_img from './vision_img.jpg'
 import mision_img from './mission_img.jpg'
+import contact_us from './contact_us.jpg'
 
 
 
@@ -16,6 +17,7 @@ export const assets = {
     bg_img,
     about_img,
     vision_img,
-    mision_img
+    mision_img,
+    contact_us
     
 }
