@@ -3,7 +3,7 @@ import { assets } from '../assets/assets'
 
 const CompanyOverview = () => {
   return (
-    <section className="py-12">
+    <section className="py-14">
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <h2 className="text-2xl sm:text-3xl text-gray-800 font-semibold text-center">
