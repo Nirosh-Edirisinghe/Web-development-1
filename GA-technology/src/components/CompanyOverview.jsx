@@ -1,10 +1,15 @@
 import React from 'react'
 import { assets } from '../assets/assets'
+import { motion } from "framer-motion";
 
 const CompanyOverview = () => {
   return (
     <section className="py-14">
-      <div className="max-w-7xl mx-auto">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="max-w-7xl mx-auto">
         {/* Section Title */}
         <h2 className="text-2xl sm:text-3xl text-gray-800 font-semibold text-center">
           Who We Are
@@ -15,10 +20,18 @@ const CompanyOverview = () => {
         </p>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.4, delay: 0.6 }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
           {/* Card 1 */}
-          <div className="group bg-white rounded-xl shadow-xl overflow-hidden transform transition duration-800 hover:scale-105">
+          <motion.div
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.4 }}
+            className="group bg-white rounded-xl shadow-xl overflow-hidden transform transition duration-800 hover:scale-105">
             {/* Image */}
             <img
               src={assets.about_img}
@@ -39,15 +52,19 @@ const CompanyOverview = () => {
                   About Us
                 </h3>
                 <p className="text-sm leading-relaxed opacity-90">
-                  GA Technology is a leading provider of telecommunications support services, helping businesses maintain reliable and efficient communication systems.  
+                  GA Technology is a leading provider of telecommunications support services, helping businesses maintain reliable and efficient communication systems.
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
 
 
-          {/* Card 2 */}          
-          <div className="group bg-white rounded-xl shadow-xl overflow-hidden transform transition duration-500 hover:scale-106">
+          {/* Card 2 */}
+          <motion.div
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.4 }}
+            className="group bg-white rounded-xl shadow-xl overflow-hidden transform transition duration-500 hover:scale-106">
             {/* Image */}
             <img
               src={assets.vision_img}
@@ -72,11 +89,15 @@ const CompanyOverview = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
 
 
           {/* Card 3 */}
-           <div className="group bg-white rounded-xl shadow-xl overflow-hidden transform transition duration-500 hover:scale-105">
+          <motion.div
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.4 }}
+            className="group bg-white rounded-xl shadow-xl overflow-hidden transform transition duration-500 hover:scale-105">
             {/* Image */}
             <img
               src={assets.mision_img}
@@ -101,11 +122,11 @@ const CompanyOverview = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
 
 
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   )
 }
