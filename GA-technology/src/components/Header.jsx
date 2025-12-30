@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div className=" mt-6">
       <div
-        className="relative rounded-lg overflow-hidden h-[320px] sm:h-[350px] md:h-[450px]"
+        className="relative rounded-xl overflow-hidden h-[320px] sm:h-[350px] md:h-[450px]"
         style={{
           backgroundImage: `url(${assets.bg_img})`,
           backgroundSize: "cover",
