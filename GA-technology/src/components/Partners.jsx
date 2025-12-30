@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from "framer-motion";
 
 import dialog from "../assets/dialog.png";
 import cenrf from "../assets/cenrf.png";
@@ -50,7 +51,7 @@ const Partners = () => {
 
     <section className="px-4 sm:px-8 py-16 bg-white">
       <div className="max-w-7xl mx-auto text-center">
-        
+
         {/* Section Title */}
         <h2 className="text-2xl sm:text-3xl font-bold text-gray-800">
           Cooperating Partners
@@ -60,7 +61,16 @@ const Partners = () => {
         </p>
 
         {/* ONE Gray Container */}
-        <div className="mt-10 bg-gray-200 shadow-md rounded-xl py-10 px-6">
+        <motion.div
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          transition={{
+            duration: 1.5,
+            type: "spring",
+            stiffness: 40,
+            damping: 15
+          }}
+          className="mt-10 bg-gray-200 shadow-md rounded-xl py-10 px-6">
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
             {partners.map((partner, index) => (
               <div key={index} className="flex flex-col items-center hover:-translate-y-4 transition-all duration-400">
@@ -75,7 +85,7 @@ const Partners = () => {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </section>
